@@ -18,27 +18,27 @@ class MyLogger
                 $this->debug($message);
                 break;
             default:
-                print($type . $this->formatted_message($message));
+                print($type . $this->formattedMessage($message));
         }
     }
 
     public function warning($message) {
-        print("WARNING:" . $this->formatted_message($message));
+        print("WARNING:" . $this->formattedMessage($message));
     }
 
     public function error($message) {
-        print('ERROR' . $this->formatted_message($message));
+        print('ERROR' . $this->formattedMessage($message));
     }
 
     public function info($message) {
-        print('INFO' . $this->formatted_message($message));
+        print('INFO' . $this->formattedMessage($message));
     }
 
     public function debug($message) {
-        print('DEBUG' . $this->formatted_message($message));
+        print('DEBUG' . $this->formattedMessage($message));
     }
 
-    private function formatted_message($message): string {
+    private function formattedMessage($message): string {
         return  ": "  . $message . "\n";
     }
 }
